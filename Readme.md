@@ -1,3 +1,3 @@
 # Project GT Creative
 
-## Unofficial (Generic) website of a security company
+## Unofficial (Generic) website 
