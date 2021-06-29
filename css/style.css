@@ -1,0 +1,671 @@
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --bgColorPreto: rgba(48, 48, 48, 1);
+  --bgColorBranco: rgba(245, 245, 245, 0.9);
+  --fontColorAmarelo: rgba(199, 149, 12, 0.7);
+}
+
+body {
+  font-family: "Red Hat Text", sans-serif, Arial, Helvetica;
+  font-weight: 100;
+  background-color: var(--bgColorBranco);
+}
+
+header {
+  width: 100%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 99999;
+  padding-bottom: 40px;
+  background-color: var(--bgColorPreto);
+  clip-path: polygon(50% 0%, 100% 0, 100% 50%, 50% 100%, 0 50%, 0 0);
+}
+
+header img {
+  width: 100px;
+  height: 100px;
+  padding: 10px 0;
+  filter: saturate(80%) brightness(80%);
+  -webkit-filter: saturate(80%) brightness(80%);
+}
+
+header nav {
+  width: 50%;
+}
+
+ul {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+
+ul li {
+  flex-grow: 1;
+  text-align: center;
+  list-style: none;
+  color: rgba(255, 255, 255, 1);
+}
+
+main.container-pricipal {
+  width: 100%;
+  height: auto;
+  overflow-x: hidden;
+  background-color: rgba(243, 243, 243, 0.897);
+}
+
+article.page_one {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../image/bg-2.jpg");
+  background-color: rgba(212, 209, 192, 0.9);
+  background-blend-mode: screen;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 150vh;
+}
+
+article.page_thow {
+  position: relative;
+  top: -180px;
+  left: 0;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.page_thow__start {
+  width: 33%;
+  height: 100vh;
+  position: relative;
+  background-color: rgba(20, 20, 20, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  flex-direction: column;
+  clip-path: polygon(0 0, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+
+.page_thow__center {
+  width: 34%;
+  height: 100vh;
+  position: relative;
+  background-image: url("../image/bg-3.jpg");
+  background-color: rgba(0, 0, 0, 0.8);
+  background-blend-mode: overlay;
+  background-size: 150% 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+
+.page_thow__end {
+  width: 33%;
+  height: 100vh;
+  position: relative;
+  background-color: rgba(20, 20, 20, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  clip-path: polygon(100% 0, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+
+/* ......conteudo three...... */
+article.page_three {
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  flex-flow: row;
+  position: relative;
+  padding-top: 50px;
+}
+
+.page_three__services-start,
+.page_three__services-center,
+.page_three__services-end {
+  width: calc(100% / 3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+section img[class="logo_servicos"] {
+  width: 100px;
+  height: 100px;
+  opacity: 0.6;
+}
+
+/* ......... conteudo four ......... */
+article.page_four {
+  width: 100%;
+  height: 200vh;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  z-index: 100;
+}
+
+.page_four__start {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-image: url("../image/bg-four-start.png");
+  background-color: rgb(46, 35, 5);
+  background-blend-mode: multiply;
+  background-position: 100% 0;
+  background-size: cover;
+
+  clip-path: polygon(0 0, 100% 10%, 100% 90%, 0 100%, 0 90%, 0 10%);
+}
+
+.page_four__end {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-image: url("../image/bg-four-end.png");
+  background-color: rgb(46, 35, 5);
+  background-blend-mode: multiply;
+  background-position: 0 center;
+  background-size: cover;
+  clip-path: polygon(100% 0, 100% 10%, 100% 90%, 100% 100%, 0 90%, 0 10%);
+}
+
+/* ......... conteudo five ......... */
+article.page_five {
+  background-image: url("../image/bg-9.jpg");
+  background-color: rgba(245, 245, 245, 0.9);
+  background-blend-mode: overlay;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  top: -40vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  text-align: center;
+  flex-direction: column;
+  z-index: 1;
+}
+
+article.page_five>img.img-social {
+  opacity: 0.8;
+  width: 10%;
+}
+
+article.page_six {
+  width: 100%;
+  height: auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  top: -200px;
+}
+
+figure.page_six__figure {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+img.redes-sociais {
+  padding: 0 1em;
+  width: 50px;
+  height: 50px;
+  filter: grayscale(100%) saturate(10%);
+  -webkit-filter: grayscale(100%) saturate(10%);
+  opacity: 0.6;
+}
+
+img.redes-sociais:hover {
+  opacity: 1;
+}
+
+article.page-seven {
+  width: 100%;
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+}
+
+/* ..........fontes
+
+    font-family: 'Red Hat Text', sans-serif;
+
+    font-family: 'Gafata', sans-serif;
+
+    font-family: 'Thasadith', sans-serif;
+
+    font-family: 'Montserrat', sans-serif;
+
+   font-family: 'Open Sans', sans-serif;
+
+
+........... */
+
+/* textos da pagina */
+
+h1 {
+  font-size: 5em;
+  color: rgba(39, 30, 5, 0.952);
+  padding-bottom: 0.5em;
+}
+
+article.page_thow h2 {
+  color: rgba(199, 149, 12, 0.5);
+}
+
+article.page_one h2 {
+  font-size: 1.5em;
+  color: rgba(92, 53, 9, 0.897);
+  font-family: "Montserrat", sans-serif;
+  font-weight: normal;
+}
+
+article.page_six h2 {
+  padding: 3em 0 0 0;
+  font-family: "Montserrat", sans-serif;
+  font-weight: normal;
+  color: rgba(199, 149, 12, 0.7);
+}
+
+h2 {
+  font-size: 1.5em;
+  color: rgba(212, 209, 192, 0.897);
+  font-family: "Montserrat", sans-serif;
+  font-weight: normal;
+}
+
+h3 {
+  font-size: 1.5em;
+  color: rgba(199, 149, 12, 0.7);
+  padding: 30px 0;
+  font-family: "Montserrat", sans-serif;
+  font-weight: normal;
+  text-align: center;
+}
+
+h5 {
+  width: 120px;
+  padding: 15px 0;
+  background-color: rgba(199, 149, 12, 0.137);
+  text-align: center;
+  color: rgba(221, 195, 147, 0.897);
+  margin-top: 10px;
+  font-size: 0.8em;
+  font-family: "Montserrat", sans-serif;
+  font-weight: normal;
+  text-transform: uppercase;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  transition: 1s linear;
+  -webkit-transition: 1s linear;
+  -moz-transition: 1s linear;
+  -ms-transition: 1s linear;
+  -o-transition: 1s linear;
+}
+
+h5:hover {
+  background-color: rgba(199, 149, 12, 0.486);
+}
+
+article.page_six p {
+  padding: 2em 0;
+  color: rgba(48, 48, 48, 0.5);
+}
+
+p.dicas-txt {
+  /* color: rgba(250, 219, 189, 0.747); */
+  color: rgba(212, 209, 192, 0.897);
+  padding: 15px 0;
+  line-height: 150%;
+  text-align: left;
+  width: 75%;
+  letter-spacing: 0.09em;
+}
+
+p.services_txt {
+  width: 60%;
+  padding: 0 20px;
+  font-size: 1.1em;
+  line-height: 175%;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.page_five h2,
+.page_four__end h2,
+.page_four__start h2 {
+  color: rgba(199, 149, 12, 0.7);
+  padding: 15px 0;
+}
+
+.page-seven h2 {
+  color: rgba(199, 149, 12, 0.7);
+  padding-bottom: 15px;
+}
+
+p.page_four__end_txt,
+p.page_four__start_txt {
+  width: 60%;
+  line-height: 175%;
+  color: rgba(212, 209, 192, 0.897);
+  letter-spacing: 0.1em;
+}
+
+p.page_four__start_txt:nth-child(3),
+p.page_four__end_txt:nth-child(3n + 3) {
+  color: rgba(173, 134, 36, 0.589);
+}
+
+.page_five>p.prgf_txt {
+  color: rgba(119, 87, 39, 0.651);
+  text-transform: uppercase;
+  letter-spacing: 0.001em;
+}
+
+p.prgf_txt {
+  width: 60%;
+  font-size: 1.1em;
+  line-height: 175%;
+  color: rgba(199, 196, 182, 0.925);
+  letter-spacing: 0.1em;
+  text-align: start;
+}
+
+li a.link {
+  text-decoration: none;
+  /* color: rgba(199, 196, 182, 0.925); */
+  color: rgba(212, 209, 192, 0.897);
+  height: 100%;
+  position: relative;
+}
+
+li a.link::before {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  display: none;
+}
+
+li a.link:hover::before {
+  content: "";
+  background-color: rgb(121, 99, 45);
+  display: block;
+  animation: moveMenu 0.5s forwards;
+  -webkit-animation: moveMenu 0.5s forwards;
+}
+
+@keyframes moveMenu {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 100%;
+  }
+}
+
+li a.link:hover {
+  color: rgb(121, 99, 45);
+  transition: 0.5s linear;
+  -webkit-transition: 0.5s linear;
+  -moz-transition: 0.5s linear;
+  -ms-transition: 0.5s linear;
+  -o-transition: 0.5s linear;
+}
+
+strong {
+  font-weight: bold;
+  padding: 0 5px;
+}
+
+strong[class="triangulo"] {
+  padding-right: 10px;
+  color: rgba(199, 149, 12, 0.3);
+}
+
+strong[class="titulo-h1"] {
+  font-size: 1em;
+  color: rgba(199, 149, 12, 1);
+  text-transform: lowercase;
+}
+
+/* fim dos textos */
+
+/* *************************************** Mobile ************************************** */
+@media screen and (min-width: 200px) and (max-width: 600px) {
+
+  /* 
+  .................  Menu ...........
+  */
+  header {
+    flex-direction: column-reverse;
+    padding-top: 10px;
+    padding-bottom: 7px;
+  }
+
+  header nav {
+    width: 90%;
+  }
+
+  li a.link {
+    font-size: 0.8em;
+    padding: 0 3px;
+  }
+
+  /* 
+  .................  page one  .............
+  */
+  h1 {
+    font-size: 2.5em;
+    text-align: center;
+  }
+
+  article.page_one h2 {
+    font-size: 1.2em;
+    text-align: center;
+  }
+
+  h5 {
+    margin-top: 0;
+  }
+
+  article.page_one {
+    height: 100vh;
+  }
+
+  /* 
+  .................  page thow  ............
+  */
+  article.page_thow {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .page_thow__start {
+    clip-path: polygon(0 0, 100% 25%, 100% 75%, 100% 100%, 0 100%, 0% 25%);
+  }
+
+  .page_thow__center {
+    clip-path: polygon(0 0, 100% 0, 100% 50%, 100% 100%, 0 100%, 0 50%);
+  }
+
+  .page_thow__end {
+    clip-path: polygon(50% 0%, 100% 0, 100% 75%, 100% 100%, 0% 75%, 0 0);
+  }
+
+  .page_thow__start,
+  .page_thow__center,
+  .page_thow__end {
+    width: 100%;
+    height: 100vh;
+  }
+
+  /* 
+  .................  page three  ............
+  */
+  article.page_three {
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+  }
+
+  .page_three__services-start,
+  .page_three__services-center,
+  .page_three__services-end {
+    width: 100%;
+    height: 100%;
+    padding: 15px 0;
+  }
+
+  section img[class="logo_servicos"] {
+    width: 75px;
+    height: 75px;
+  }
+
+  h2 {
+    font-size: 1em;
+    text-align: center;
+  }
+
+  p.services_txt {
+    line-height: 150%;
+    width: 80%;
+  }
+
+  /* 
+  ................. page four ...................
+  */
+  article.page_four {
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .page_four__start {
+    width: 100%;
+    height: 100%;
+    padding: 35px 0;
+    clip-path: polygon(50% 0%, 100% 10%, 100% 100%, 50% 100%, 0 100%, 0% 10%);
+  }
+
+  .page_four__end {
+    width: 100%;
+    height: 100%;
+    padding: 100px 0;
+    clip-path: polygon(50% 0%, 100% 0, 100% 90%, 50% 100%, 0 90%, 0 0);
+  }
+
+  p.page_four__end_txt,
+  p.page_four__start_txt {
+    width: 80%;
+    line-height: 150%;
+  }
+
+  /* 
+  .................... page five ...................... 
+  */
+  article.page_five {
+    height: 130vh;
+    justify-content: flex-end;
+  }
+
+  article.page_five>img.img-social {
+    width: 25%;
+  }
+
+  article.page-seven {
+    justify-content: flex-end;
+    height: 100%;
+  }
+
+  p.prgf_txt {
+    width: 80%;
+  }
+
+  strong[class="titulo-h1"] {
+    font-size: 1.3em;
+  }
+}
+
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+  header {
+    flex-direction: column-reverse;
+    padding-top: 20px;
+    padding-bottom: 5px;
+  }
+
+  header nav {
+    width: 80%;
+  }
+
+  article.page_one {
+    height: 100vh;
+  }
+
+  .page_thow__start,
+  .page_thow__center,
+  .page_thow__end {
+    clip-path: polygon(50% 0%, 100% 10%, 100% 90%, 50% 100%, 0 90%, 0 10%);
+  }
+
+  .page_four__end h2,
+  .page_four__start h2 {
+    padding: 10px 0;
+    font-size: 1.3em;
+  }
+
+  p.page_four__end_txt,
+  p.page_four__start_txt {
+    width: 80%;
+    line-height: 165%;
+    letter-spacing: 0.011em;
+  }
+
+  .page_four__start,
+  .page_four__end {
+    clip-path: polygon(50% 0%, 100% 10%, 100% 90%, 50% 100%, 0 90%, 0 10%);
+  }
+}
